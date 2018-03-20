@@ -1,0 +1,32 @@
+<div class="nav">
+  <div class="header flex-row">
+
+    <div class="flex-row">
+      <% if (user) { %>
+        <a href="/">Dashboard</a>
+        <a href="/quizzes">My Quizzes</a>
+        <a href="/create">Create Quiz</a>
+      <% } else { %>
+        <a href="/">Home</a>
+      <% } %>
+    </div>
+
+    
+    <div class="user flex-row">
+      <% if (user) { %>
+        <a href="/account">Account</a>
+        <a href="/signout">Sign out</a>
+      <% } else { %>
+        <a href="/signin">Sign in</a>
+        <a href="/signup">Sign up</a>
+      <% }  %>    
+    </div>
+
+
+    <script>
+      const path = window.location.pathname
+      document.querySelector(`[href*='${path}']`).style.opacity = "1"
+    </script>
+
+  </div>
+</div>

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Serif');
+
+@import "colors";
+
+body {
+  background-color: $bodyBg;
+  color: white;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.account {
+  p {
+    text-align: center;
+  }
+}
+
+.container {
+  line-height: 1.35;
+  margin: 0 auto;  
+  max-width: 50em;
+  padding: 2em;
+  button {
+    background: $btnBlue;
+    border-radius: 0;
+    border: none;
+    padding: .5em;    
+  }
+  form {
+    input {
+      border: 1px solid white;
+      display: block;
+      margin-bottom: 1em;
+      padding: .5em;
+    }
+  }
+}
+
+.errors {
+  color: red;
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  &-row {
+    @extend .flex;
+    flex-direction: row;
+  }
+  &-column {
+    @extend .flex;    
+    flex-direction: column;
+  }
+}
+
+.footer {
+  border-top: 1px solid white;
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+  opacity: .75;
+}
+.nav {
+  .header {
+    background-color: $headerBg;
+    justify-content: space-between;
+    a, span {
+      opacity: .75;
+      padding: 1em;
+      &:hover{
+        background-color: $headerBgHover;
+      }   
+    }
+  }  
+}
+
+.marketing {
+  .header {
+    text-align: center;
+  }
+}
+
+.signup, .signin {
+  .cta {
+    text-align: center;
+  }
+  form {
+    max-width: 20em;
+    margin: 0 auto;
+    padding: 1.5em;
+    align-items: center;
+    button {
+      color: white;
+    }    
+    input {
+      width: 100%;
+    }
+  }
+}
