@@ -71,14 +71,16 @@ body {
   .header {
     background-color: $headerBg;
     justify-content: space-between;
+    padding: 1em;
     a, span {
       opacity: .75;
-      padding: 1em;
+      margin-left: 1em;
       &:hover{
-        background-color: $headerBgHover;
+        // background-color: $headerBgHover;
+        opacity: 1;
       }   
     }
-  }  
+  }
 }
 
 .marketing {
