@@ -4,6 +4,7 @@ import { BrowserRouter as BrowserRouter, Route, Link, Switch, Redirect } from "r
 
 import Dashboard from "./components/Dashboard"
 import MyQuizzes from "./components/MyQuizzes"
+import Quiz from "./components/Quiz/Quiz"
 import CreateQuiz from "./components/CreateQuiz"
 
 class Router extends Component {
@@ -12,8 +13,9 @@ class Router extends Component {
 			<BrowserRouter>
         <Switch>
           <Route exact path="/" component={Dashboard} />
-          <Route path="/quizzes" component={MyQuizzes} />
-          <Route path="/create" component={CreateQuiz} />
+          <Route exact path="/quizzes" component={MyQuizzes} />
+          <Route path="/quizzes/:link" component={Quiz} />
+          <Route exact path="/create" component={CreateQuiz} />
           <Route path="*" render={() => (<Redirect to="/" />)} />
         </Switch>
 			</BrowserRouter>

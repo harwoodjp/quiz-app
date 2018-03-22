@@ -1,0 +1,28 @@
+[
+	{
+		"id": 0,
+		"title": "Quotes from Back to the Future",
+		"link": "quotes-from-back-to-the-future",
+		"questions": [
+			{
+				"prompt": "Dr. Emmett Brown: If my calculations are correct, when this baby hits ___ miles per hour... you're gonna see some serious shit.",
+				"answers": [88, 112, 50, 99]
+			},
+			{
+				"prompt": "Dr. Emmett Brown: ___? Where we're going, we don't need ___.",
+				"answers": ["Money/money", "Time/time", "Roads/roads"]				
+			}
+		]
+	},
+	{
+		"id": 1,
+		"title": "CSS Basics for a Job Interview",
+		"link": "css-basics-for-a-job-interview",
+		"questions": [
+			{
+				"prompt": "Which selector deletes an element from the DOM?",
+				"answers": ["display: inline", "opacity: 0", "display: none", "none of the above"]
+			}
+		]
+	}
+]

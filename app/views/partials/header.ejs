@@ -25,7 +25,8 @@
 
     <script>
       const path = window.location.pathname
-      document.querySelector(`[href*='${path}']`).style.opacity = "1"
+      const href = "/" + path.split("/")[1]
+      document.querySelector(`[href*='${href}']`).style.opacity = "1"
     </script>
 
   </div>
