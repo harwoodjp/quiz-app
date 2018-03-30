@@ -25,13 +25,21 @@ class Quiz extends Component {
 
   componentDidMount() {
     const link = this.props.match.params.link
-    const f = fetch("/public/data/quizzes.json").then(res => res.text())
+    const f = fetch(`/api/quizzes/${link}`,{
+      credentials: "include"      
+    }).then(res => res.text())
     f.then(res => {
-      const quizzes = JSON.parse(res)
-      const thisQuiz = QuizUtil.findQuizByLink(quizzes, link)
+      const questions = JSON.parse(res).map(question => {
+        return {
+          question_id: question.question_id,
+          prompt: question.prompt,
+          answer: question.answer
+        }
+      })
+      console.log(questions)
       this.setState({
-        title: thisQuiz.title,
-        questions: QuestionUtil.mapQuestionsArrToCompArr(thisQuiz.questions)
+        title: JSON.parse(res)[0].title,
+        questions: []
       })
     })
 

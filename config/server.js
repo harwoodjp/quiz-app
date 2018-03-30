@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
 app.use(expressSession({
   secret: process.env.SESSION_SECRET,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
 }))
 app.set("views", path.join(__dirname).replace("config", "app/views"))
 app.engine("ejs", require("express-ejs-extend"))

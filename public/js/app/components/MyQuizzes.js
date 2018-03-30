@@ -22,8 +22,11 @@ class MyQuizzes extends Component {
   }
 
   componentDidMount() {
-    const f = fetch("/public/data/quizzes.json").then(res => res.text())
+    const f = fetch("api/quizzes", {
+      credentials: "include"
+    }).then(res => res.text())
     f.then(res => {
+      console.log(res)
       const quizzes = JSON.parse(res)
       this.setState({
         quizList: QuizUtil.mapQuizArrToQuizListCompArr(quizzes)
